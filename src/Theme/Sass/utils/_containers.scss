@@ -1,0 +1,32 @@
+/* Containers
+
+.con-lg {
+  margin : 0 auto;
+  max-width: 100rem
+
+*/
+
+
+// $containers: (
+//   "xl": 140rem,
+//   "lg": 120rem,
+//   "md": 106rem,
+//   "sm": 63rem,
+// );
+
+
+@mixin container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+
+@each $key, $val in $containers {
+  .con-#{$key} {
+    @include container;
+    max-width: $val;
+  }
+}
+

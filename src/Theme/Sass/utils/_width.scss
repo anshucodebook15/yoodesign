@@ -1,0 +1,100 @@
+@mixin width-mixin($num, $limit) {
+  // Desktop View
+  @for $i from 0 through $limit {
+    $val: #{$num * $i};
+
+    .w#{$val} {
+      width: $val + "%";
+    }
+  }
+
+  // XXL View 1400px
+  @include xxl {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{xxl} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // XL View 1200px
+  @include xl {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{xl} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // Lg View 960px
+  @include lg {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{lg} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // xmd View 820px
+  @include xmd {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{xmd} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // md View 768px
+  @include md {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{md} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // sm View 576px
+  @include sm {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{sm} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // xs View 414px
+  @include xs {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{xs} {
+        width: $val + "%";
+      }
+    }
+  }
+
+  // xxs View 375px
+  @include xxs {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+
+      .w#{$val}-#{xxs} {
+        width: $val + "%";
+      }
+    }
+  }
+}
+
+@include width-mixin(10, 10);

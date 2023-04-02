@@ -1,0 +1,41 @@
+/* font-family: 'Inter', sans-serif; */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 62% => 10px = 1rem */
+html {
+  font-size: var(--body-unit-rem-size);
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+
+/* Body optimization */
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Adaptive Images  */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit Forms for inputs and buttons */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

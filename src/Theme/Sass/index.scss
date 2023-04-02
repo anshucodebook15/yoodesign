@@ -1,0 +1,36 @@
+@import "./variables/variables";
+@import "./variables/sizes";
+
+
+@import "./base/base";
+
+@import "./utils/mediaquery";
+
+// Colors
+@import "./utils/test";
+@import "./utils/containers";
+@import "./utils/padding";
+@import "./utils/margin";
+@import "./utils/utils";
+@import "./utils/borders";
+@import "./utils/grid"; // GRID
+@import "./utils/flexbox"; // FLEXBOX
+@import "./utils/width"; // WIDTH
+@import "./utils/height"; // HEIGHT
+
+@import "./colors/colors";
+@import "./typography/typography";
+
+// Icons
+@import "./icons/icons";
+
+// Inputs
+@import "./forms/inputs";
+
+// Components
+@import "./components/button";
+
+// Pages
+@import "./Pages/home.scss";
+@import "./Pages/test.scss";
+@import "./Pages/yoo.scss";

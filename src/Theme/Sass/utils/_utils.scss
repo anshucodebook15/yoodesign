@@ -1,0 +1,331 @@
+@use "../variables/sizes";
+
+/**
+
+$xxs: "xxs";
+$xs: "xs";
+$sm: "sm";
+$md: "md";
+$xmd: "xmd";
+$lg: "lg";
+$xl: "xl";
+$xxl: "xxl";
+
+
+*/
+
+// Display
+
+$display: (
+  "flex": flex,
+  "block": block,
+  "inlineblock": inline-block,
+  "none": none,
+  "inline": inline,
+  "grid": grid,
+);
+
+// Text Align
+$text: (
+  "txtc": center,
+  "txtr": right,
+  "txtl": left,
+);
+
+// Basic Util classes
+.txtdn {
+  text-decoration: none;
+}
+.txtul {
+  text-decoration: underline;
+}
+.txtlt {
+  text-decoration: line-through;
+}
+
+// List
+.lstn {
+  list-style: none;
+}
+.lstua {
+  list-style: upper-alpha;
+}
+.lstla {
+  list-style: lower-alpha;
+}
+
+// Positions
+.pos-ab {
+  position: absolute;
+}
+.pos-fix {
+  position: fixed;
+}
+.pos-rel {
+  position: relative;
+}
+.pos-cen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Z-index
+
+@mixin zindexs($limit) {
+  @for $i from 0 through $limit {
+    .z-#{$i * 100} {
+      z-index: #{$i * 100};
+    }
+  }
+}
+
+@include zindexs(10);
+
+// Clearfix
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// Display Classes
+@each $key, $val in $display {
+  .dis-#{$key} {
+    display: $val;
+  }
+}
+
+@each $key, $val in $text {
+  .#{$key} {
+    text-align: $val;
+  }
+}
+
+// XXL -
+@include xxl {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$xxl} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$xxl} {
+      text-align: $val;
+    }
+  }
+}
+
+// xl
+@include xl {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$xl} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$xl} {
+      text-align: $val;
+    }
+  }
+}
+
+//lg
+@include lg {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$lg} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$lg} {
+      text-align: $val;
+    }
+  }
+}
+
+//xmd
+@include xmd {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$xmd} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$xmd} {
+      text-align: $val;
+    }
+  }
+}
+
+//md
+@include md {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$md} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$md} {
+      text-align: $val;
+    }
+  }
+}
+
+//sm
+@include sm {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$sm} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$sm} {
+      text-align: $val;
+    }
+  }
+}
+
+//xs
+@include xs {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$xs} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$xs} {
+      text-align: $val;
+    }
+  }
+}
+
+//xs
+@include xxs {
+  @each $key, $val in $display {
+    .dis-#{$key}-#{$xxs} {
+      display: $val;
+    }
+  }
+
+  @each $key, $val in $text {
+    .#{$key}-#{$xxs} {
+      text-align: $val;
+    }
+  }
+}
+
+// .clearfix::after {
+//   content: "";
+//   clear: both;
+//   display: table;
+// }
+
+// /* Display */
+// @each $key, $val in $display {
+
+//   .dx-#{$key} {
+//     display: $val;
+//   }
+
+//   @include lg {
+//     .dx-lg-#{$key} {
+//       display: $val;
+//     }
+//   }
+
+//   @include md {
+//     .dx-md-#{$key} {
+//       display: $val;
+//     }
+//   }
+
+//   @include sm {
+//     .dx-sm-#{$key} {
+//       display: $val;
+//     }
+//   }
+// }
+
+// .txtc {
+//   text-align: center;
+// }
+// .txtr {
+//   text-align: right;
+// }
+
+// .lstn {
+//   list-style-type: none;
+// }
+
+// @include lg {
+
+// }
+
+// @include md {
+
+//   .txtc-md {
+//     text-align: center;
+//   }
+//   .txtr-md {
+//     text-align: right;
+//   }
+
+// }
+
+// @include sm {
+
+//   .txtc-sm {
+//     text-align: center;
+//   }
+//   .txtr-sm {
+//     text-align: right;
+//   }
+
+// }
+
+// .pa{
+//   position: absolute;
+// }
+
+// .zi100{
+//   z-index: 100;
+// }
+// .zi200{
+//   z-index: 200;
+// }
+// .zi300{
+//   z-index: 300;
+// }
+
+// .zi-100{
+//   z-index: -100;
+// }
+// .zi-200{
+//   z-index: -200;
+// }
+// .zi-300{
+//   z-index: -300;
+// }
+
+// .pi0{
+//   padding: 0 !important;
+// }
+
+// .ml_pi_16{
+//   margin-left: 1rem !important;
+// }
+
+// .txtdn{
+//   text-decoration: none;
+// }
+
+// // Position

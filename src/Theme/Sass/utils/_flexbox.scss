@@ -1,0 +1,54 @@
+.flx {
+  display: flex;
+}
+
+.flx-dcol {
+  flex-direction: column;
+}
+
+.flx-drow {
+  flex-direction: row;
+}
+
+.flx-drowrev {
+  flex-direction: row-reverse;
+}
+.flx-dcolrev {
+  flex-direction: column-reverse;
+}
+
+// justify content
+
+.jcc {
+  justify-content: center;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.jcfe {
+  justify-content: flex-end;
+}
+
+// Align Items
+
+.aic {
+  align-items: center;
+}
+
+.aife {
+  align-items: flex-end;
+}
+
+.aib {
+  align-items: baseline;
+}
+
+.flxh100 {
+  height: 100%;
+}

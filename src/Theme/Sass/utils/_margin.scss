@@ -1,0 +1,338 @@
+// margin Delration
+/*
+$xxl: "xxl" -> 1400px;
+$xl: "xl" -> 1200;
+$lg: "lg" -> 960;
+$xmd: "xmd" -> 820;
+$md: "md" -> 768;
+$sm: "sm" -> 576;
+$xs: "xs" -> 414;
+$xxs: "xxs" -> 375;
+
+*/
+
+@mixin margin-mixin($num, $limit) {
+  // Desktop View
+  @for $i from 0 through $limit {
+    $val: #{$num * $i};
+    $cal: #{($num * $i) / 10}rem;
+
+    .m-#{$val} {
+      margin: $cal;
+    }
+
+    .mt-#{$val} {
+      margin-top: $cal;
+    }
+
+    .mr-#{$val} {
+      margin-right: $cal;
+    }
+
+    .mb-#{$val} {
+      margin-bottom: $cal;
+    }
+
+    .ml-#{$val} {
+      margin-left: $cal;
+    }
+
+    .mx-#{$val} {
+      margin-inline: $cal;
+    }
+
+    .my-#{$val} {
+      margin-block: $cal;
+    }
+  }
+
+  // XXL View 1400px
+  @include xxl {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$xxl} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$xxl} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$xxl} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$xxl} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$xxl} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$xxl} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$xxl} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // XL View 1200px
+  @include xl {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$xl} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$xl} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$xl} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$xl} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$xl} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$xl} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$xl} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // Lg View 960px
+  @include lg {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$lg} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$lg} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$lg} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$lg} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$lg} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$lg} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$lg} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // xmd View 820px
+  @include xmd {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$xmd} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$xmd} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$xmd} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$xmd} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$xmd} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$xmd} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$xmd} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // md View 768px
+  @include md {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$md} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$md} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$md} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$md} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$md} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$md} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$md} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // sm View 576px
+  @include sm {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$sm} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$sm} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$sm} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$sm} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$sm} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$sm} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$sm} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // xs View 414px
+  @include xs {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$xs} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$xs} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$xs} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$xs} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$xs} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$xs} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$xs} {
+        margin-block: $cal;
+      }
+    }
+  }
+
+  // xxs View 375px
+  @include xxs {
+    @for $i from 0 through $limit {
+      $val: #{$num * $i};
+      $cal: #{($num * $i) / 10}rem;
+
+      .m-#{$val}-#{$xxs} {
+        margin: $cal;
+      }
+
+      .mt-#{$val}-#{$xxs} {
+        margin-top: $cal;
+      }
+
+      .mr-#{$val}-#{$xxs} {
+        margin-right: $cal;
+      }
+
+      .mb-#{$val}-#{$xxs} {
+        margin-bottom: $cal;
+      }
+
+      .ml-#{$val}-#{$xxs} {
+        margin-left: $cal;
+      }
+
+      .mx-#{$val}-#{$xxs} {
+        margin-inline: $cal;
+      }
+
+      .my-#{$val}-#{$xxs} {
+        margin-block: $cal;
+      }
+    }
+  }
+}
+
+@include margin-mixin(4, 20);

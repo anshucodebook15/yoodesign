@@ -1,0 +1,408 @@
+// $grid-span: (
+//   "span-1": span 1,
+//   "span-2": span 2,
+//   "span-3": span 3,
+//   "span-4": span 4,
+//   "span-5": span 5,
+//   "span-6": span 6,
+//   "span-7": span 7,
+//   "span-8": span 8,
+//   "span-9": span 9,
+//   "span-10": span 10,
+//   "span-11": span 11,
+//   "span-12": span 12,
+//   "span-13": span 13,
+// );
+
+// .dg {
+//   display: grid;
+// }
+
+// .g-col-10 {
+//   grid-template-columns: repeat(18, 1fr);
+// }
+
+// .g-col-span-2 {
+//   grid-column: span 2;
+// }
+
+// .g-col-100 {
+//   grid-column: span 12;
+// }
+
+// // Goal Plan Grid
+// .gp-col-6 {
+//   grid-template-columns: repeat(6, 1fr);
+// }
+// .gp-col-7 {
+//   grid-template-columns: repeat(7, 1fr);
+// }
+// // Goal Plan Grid
+// .gp-col-14 {
+//   grid-template-columns: repeat(14, 1fr);
+// }
+
+// .gp-row-span-2 {
+//   grid-row: span 2;
+// }
+
+
+
+
+// // Mobile grid 
+
+// .gp_grid-4-8{
+//   grid-template-columns: 4fr 8fr;
+// }
+
+
+// .gp_grid-12{
+//   grid-template-columns:  repeat(12, 1fr);
+// }
+
+
+// .gp-mob-col-4{
+//   grid-template-columns: repeat(4, 1fr);
+// }
+// .gp-mob-col-5{
+//   grid-template-columns: repeat(5, 1fr);
+// }
+// .gp-mob-col-8{
+//   grid-template-columns: repeat(8, 1fr);
+// }
+
+// .bx_md_b{
+//   border: 1px solid #e7e7e7;
+//   background-color: #000;
+
+//   @include md{
+//     padding: .9rem;
+//   }
+//   @include sm{
+//     padding: 0rem;
+//   }
+
+//   // padding: 1.3rem;
+// }
+
+
+
+// .gp-bg-lines {
+//   background-image: url("../../Assets/backgrounds/gp_ver_lines2.svg");
+//   background-size: 15rem;
+//   background-repeat: no-repeat;
+//   background-position-x: -1rem;
+//   background-position-y: 2rem;
+
+//   &-bx2{
+//     background-image: url("../../Assets/backgrounds/gp_ver_lines2.svg");
+//     background-size: 15rem;
+//     background-repeat: no-repeat;
+//     background-position-x: 0rem;
+//     background-position-y: -33rem;
+//   }
+
+//   &-bx3{
+//     background-image: url("../../Assets/backgrounds/gp_ver_lines3.svg");
+//     background-size: 18rem;
+//     background-repeat: no-repeat;
+//     background-position-x: 0rem;
+//     background-position-y: -27rem;
+//   }
+
+//   &-bx4{
+//     background-image: url("../../Assets/backgrounds/gp_ver_lines3.svg");
+//     background-size: 18rem;
+//     background-repeat: no-repeat;
+//     background-position-x: 0rem;
+//     background-position-y: -1rem;
+//   }
+
+
+
+
+// }
+
+// .bx {
+//   border: 0.5px solid #7e4747;
+//   background-color: #000;
+//   padding: 1.52rem;
+//   color: #000;
+
+
+
+  
+//   @include xl{
+//     padding: 1.31rem;
+    
+//   }
+
+//   @include mlg{
+//     padding: 1.11rem;
+//   }
+
+//   @include lg{
+//     padding: .96rem;
+//   }
+  
+//   @include xl-min{
+//     padding: 2.4rem;
+//   }
+//   @include xl-min-2000{
+//     padding: 2.4rem;
+//   }
+
+
+// }
+// .bx_wht {
+//   border: 0.5px solid #f1f1f1;
+//   background-color: #fdfdfd;
+//   padding: 1.5rem;
+//   color: #fbfbfb;
+
+
+
+//   @include xl{
+//     padding: 1.3rem;
+    
+//   }
+
+//   @include mlg{
+//     padding: 1.11rem;
+//   }
+
+
+//   @include lg{
+//     padding: 1rem;
+//   }
+
+
+
+
+
+//   @include xl-min{
+//     padding: 2.3rem;
+//   }
+//   @include xl-min-2000{
+//     padding: 2.3rem;
+//   }
+// }
+
+// .bx_col_trans{
+//   color: transparent !important;
+// }
+
+// .bx_no_bod{
+//   border: none !important;
+// }
+
+// .bx_bod_bot_black{
+//   border-bottom: 2px solid #000 !important;
+// }
+
+// .bx_mob_bg_lines {
+//   background-image: url("../../Assets/backgrounds/gp_ver_lines.svg") ;
+//   background-size: 5rem;
+//   background-repeat: no-repeat;
+//   background-position-x: -1rem;
+//   background-position-y: -1rem;
+// }
+// .bx_mob_bg_lines-2 {
+//   background-image: url("../../Assets/backgrounds/gp_ver_lines.svg") ;
+//   background-size: 5rem;
+//   background-repeat: no-repeat;
+//   background-position-x: -1rem;
+//   background-position-y: -4rem;
+// }
+// .bx_mob_bg_lines-3 {
+//   background-image: url("../../Assets/backgrounds/gp_ver_lines.svg") ;
+//   background-size: 5rem;
+//   background-repeat: no-repeat;
+//   background-position-x: -1rem;
+//   background-position-y: -4rem;
+// }
+
+// .bx_gp_line_cube{
+//   background-image: url('../../Assets/svg/gp_above_line_cube.svg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
+
+// .bx_mob_wht{
+//   // border: 0.5px solid #f1f1f1;
+//   border: 0.5px solid #d8d8d8;
+//   // background-color: #fdfdfd;
+//   background-color: #fff;
+//   color: #fbfbfb;
+
+//   @include md{
+//     padding: .9rem;
+//   }
+
+//   @include sm{
+//     padding: 0rem;
+//   }
+
+
+//   @include xs{
+
+//   }
+
+
+
+// }
+
+
+
+
+// @include md{
+//   .bx_mob_dgrey{
+//     background-color: #d1d1d1 !important;
+//   }
+// }
+
+
+// .bx_txt_grey{
+//   color: #fdfdfd;
+// }
+
+// .xp_mob_gp_text{
+//   font-size: 1.1rem;
+//   line-height: 1.5rem;
+// }
+
+// .bx_tab {
+//   background-color: #777777;
+//   border: 0.4px solid white;
+//   cursor: pointer;
+// }
+// .bx_bod-black {
+//   border: 0.4px solid rgb(0, 0, 0);
+// }
+// .bx_bod-grey {
+//   border: 0.4px solid rgb(238, 238, 238);
+// }
+// .bx_bod-2 {
+//   border: 2px solid rgb(238, 238, 238);
+// }
+// .bx_bg-black {
+//   background-color: #000;
+// }
+// .bx_bg-grey {
+//   background-color: #a1a1a1 !important;
+// }
+
+// .bx_tab-active {
+//   background-color: white;
+//   color: #000;
+// }
+
+// .xp_goalplan-right{
+//     position: relative;
+// }
+
+// // .xp_gp-tabs{
+// //     width: 100%;
+// //     height: 100%;
+// //     background-image: url('../../Assets/backgrounds/gp_grid_bg.svg');
+// //     background-size: 179rem;
+// //     background-repeat: no-repeat;
+// //     background-position-x: -10rem;
+// //     background-position-y: -10rem;
+// // }
+
+// /* Padding */
+// @each $key, $val in $grid-span {
+//   .g-col-#{$key} {
+//     grid-column: $val;
+//   }
+
+//   .g-row-#{$key} {
+//     grid-row: $val;
+//   }
+
+//   @include lg {
+//   }
+
+//   @include md {
+//     .gmd-col-#{$key} {
+//       grid-column: $val;
+//     }
+//   }
+
+//   @include sm {
+//     .gsm-col-#{$key} {
+//       grid-column: $val;
+//     }
+//   }
+// }
+
+// // ********************************************************************************
+
+// .box-1 {
+//   background-color: pink;
+// }
+// .box-2 {
+//   background-color: rgb(244, 255, 141);
+// }
+// .box-3 {
+//   background-color: rgb(149, 214, 255);
+// }
+
+// .g-col-1-100 {
+//   grid-template-columns: 1fr 100%;
+// }
+
+// .g-col-2-100 {
+//   grid-template-columns: 1fr 1fr 100%;
+// }
+// .g-col-3-100 {
+//   grid-template-columns: 1fr 1fr 1fr 100%;
+// }
+
+// .child-1 {
+//   background-color: pink;
+// }
+// .child-2 {
+//   background-color: rgb(238, 149, 125);
+// }
+
+// .bg-bl {
+//   background-color: black;
+// }
+
+// .box {
+//   padding: 0.3rem 0rem 0.3rem 1rem;
+//   background-color: #eee;
+// }
+
+// .tmpgrid {
+//   display: grid;
+//   grid-template-rows: 5rem 100%;
+
+//   &-item {
+//     background-color: #eee;
+
+//     &-1 {
+//       width: 5rem;
+//       height: 5rem;
+//       background-color: pink;
+//     }
+//     &-2 {
+//       background-color: rgb(192, 197, 255);
+//     }
+//     &-3 {
+//       background-color: rgb(209, 250, 166);
+//     }
+//     &-4 {
+//       background-color: rgb(247, 139, 255);
+//     }
+//   }
+// }
+
+// .gc-1-100 {
+//   grid-template-columns: 5rem 100%;
+// }
+// .gc-1-100 {
+//   grid-template-columns: 5rem 5rem 100%;
+// }

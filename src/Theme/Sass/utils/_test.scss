@@ -1,0 +1,45 @@
+.bod {
+  border: 1px solid blue;
+
+  @include lg {
+    border: 1px solid rgb(255, 145, 0);
+  }
+
+  @include md {
+    border: 1px solid rgb(255, 0, 212);
+  }
+
+  @include sm {
+    border: 1px solid rgb(255, 242, 0);
+  }
+}
+
+.boxtest {
+  width: 100%;
+  background-color: pink;
+}
+
+
+.boxbox{
+  width: 50rem;
+  height: 50rem;
+  background-color: lightblue;
+}
+
+.box{
+
+  width: 10rem;
+  height: 10rem;
+  
+
+}
+
+.box1{
+  background-color: pink;
+}
+.box2{
+  background-color: rgb(194, 239, 181);
+}
+.box3{
+  background-color: rgb(255, 195, 250);
+}

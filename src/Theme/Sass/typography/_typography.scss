@@ -1,0 +1,348 @@
+// Typography Scale
+
+// .ff-roboto {
+//   font-family: "Roboto", sans-serif;
+// }
+
+@mixin typescale(
+  $fontsize,
+  $fontweight: 400,
+  $lineheight: 1.5,
+  $letterspacing: 1.2,
+  $marginbottom: 1rem
+) {
+  font-size: $fontsize;
+  font-weight: $fontweight;
+  line-height: $lineheight;
+  letter-spacing: $letterspacing;
+  margin-bottom: $marginbottom;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+li,
+ul,
+img {
+  margin: 0;
+}
+
+
+// Default Sizes with responsiveness
+
+h1 {
+  @include typescale(2rem, default, 1.2, default, 1rem);
+}
+
+h2 {
+  @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+}
+
+h3 {
+  @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+}
+
+h4 {
+  @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+}
+
+h5 {
+  @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+}
+
+
+// Classess
+
+
+
+
+
+// Responsive ness
+
+@include xl {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+@include lg {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+@include xmd {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+
+@include md {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+
+@include sm {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+@include xs {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+@include xxs {
+  h1 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h2 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h3 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h4 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+
+  h5 {
+    @include typescale(2rem, 400, 1.2, 1rem, 1rem);
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+// h1 {
+//   font-size: map-get($typography, "h1", "desk", "font-size");
+//   font-weight: map-get($typography, "h1", "desk", "font-weight");
+//   line-height: map-get($typography, "h1", "desk", "line-height");
+//   letter-spacing: map-get($typography, "h1", "desk", "letter-spacing");
+//   margin-bottom: map-get($typography, "h1", "desk", "margin-bottom");
+
+//   @include lg {
+//     font-size: map-get($typography, "h1", "lg", "font-size");
+//   }
+//   @include md {
+//     font-size: map-get($typography, "h1", "md", "font-size");
+//   }
+//   @include sm {
+//     font-size: map-get($typography, "h1", "sm", "font-size");
+//   }
+// }
+
+h2 {
+  font-size: map-get($typography, "h2", "desk", "font-size");
+  font-weight: map-get($typography, "h2", "desk", "font-weight");
+  line-height: map-get($typography, "h2", "desk", "line-height");
+  letter-spacing: map-get($typography, "h2", "desk", "letter-spacing");
+  margin-bottom: map-get($typography, "h2", "desk", "margin-bottom");
+
+  @include lg {
+    font-size: map-get($typography, "h2", "lg", "font-size");
+  }
+  @include md {
+    font-size: map-get($typography, "h2", "md", "font-size");
+  }
+  @include sm {
+    font-size: map-get($typography, "h2", "sm", "font-size");
+  }
+}
+
+h3 {
+  font-size: map-get($typography, "h3", "desk", "font-size");
+  font-weight: map-get($typography, "h3", "desk", "font-weight");
+  line-height: map-get($typography, "h3", "desk", "line-height");
+  letter-spacing: map-get($typography, "h3", "desk", "letter-spacing");
+  margin-bottom: map-get($typography, "h3", "desk", "margin-bottom");
+
+  @include lg {
+    font-size: map-get($typography, "h3", "lg", "font-size");
+  }
+  @include md {
+    font-size: map-get($typography, "h3", "md", "font-size");
+  }
+  @include sm {
+    font-size: map-get($typography, "h3", "sm", "font-size");
+  }
+}
+
+h4 {
+  font-size: map-get($typography, "h4", "desk", "font-size");
+  font-weight: map-get($typography, "h4", "desk", "font-weight");
+  line-height: map-get($typography, "h4", "desk", "line-height");
+  letter-spacing: map-get($typography, "h4", "desk", "letter-spacing");
+  margin-bottom: map-get($typography, "h4", "desk", "margin-bottom");
+
+  @include lg {
+    font-size: map-get($typography, "h4", "lg", "font-size");
+  }
+  @include md {
+    font-size: map-get($typography, "h4", "md", "font-size");
+  }
+  @include sm {
+    font-size: map-get($typography, "h4", "sm", "font-size");
+  }
+}
+h5 {
+  font-size: map-get($typography, "h5", "desk", "font-size");
+  font-weight: map-get($typography, "h5", "desk", "font-weight");
+  line-height: map-get($typography, "h5", "desk", "line-height");
+  letter-spacing: map-get($typography, "h5", "desk", "letter-spacing");
+  margin-bottom: map-get($typography, "h5", "desk", "margin-bottom");
+
+  @include lg {
+    font-size: map-get($typography, "h5", "lg", "font-size");
+  }
+  @include md {
+    font-size: map-get($typography, "h5", "md", "font-size");
+  }
+  @include sm {
+    font-size: map-get($typography, "h5", "sm", "font-size");
+  }
+}
+
+p {
+  font-size: map-get($typography, "p", "font-size");
+  font-weight: map-get($typography, "p", "font-weight");
+  line-height: map-get($typography, "p", "line-height");
+  letter-spacing: map-get($typography, "p", "letter-spacing");
+  margin-bottom: map-get($typography, "p", "margin-bottom");
+}
+
+h6 {
+  font-size: map-get($typography, "h6", "desk", "font-size");
+  font-weight: map-get($typography, "h6", "desk", "font-weight");
+  line-height: map-get($typography, "h6", "desk", "line-height");
+  letter-spacing: map-get($typography, "h6", "desk", "letter-spacing");
+  margin-bottom: map-get($typography, "h6", "desk", "margin-bottom");
+}
+
+/* Font Weight */
+@each $key, $val in $font-weight {
+  .#{$key} {
+    font-weight: $val;
+  }
+}
+
+/* Font Size */
+@each $key, $val in $font-sizes {
+  .font-size-#{$key} {
+    font-size: $val;
+  }
+}
+
+/* Line height */
+@each $key, $val in $font-sizes {
+  .font-size-#{$key} {
+    font-size: $val;
+  }
+}
+
+// Anchor
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

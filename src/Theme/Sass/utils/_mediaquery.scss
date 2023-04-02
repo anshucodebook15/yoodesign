@@ -1,0 +1,123 @@
+// New Breakpoints
+$breakpoints: (
+  "xxl": 1400px,
+  "xl": 1200px,
+  "lg": 960px,
+  "xmd": 820px,
+  "md": 768px,
+  "sm": 576px,
+  "xs": 414px,
+  "xxs": 375px,
+);
+
+// Decending order
+
+@mixin xxl {
+  @media screen and (max-width: map-get($breakpoints, "xxl")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin xmd {
+  @media screen and (max-width: map-get($breakpoints, "xmd")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media screen and (max-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media screen and (max-width: map-get($breakpoints, "xxs")) {
+    @content;
+  }
+}
+
+@mixin breakpoint($bp: 0) {
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+
+// Ascending order
+
+// @mixin xxs {
+//   @media screen and (max-width: map-get($breakpoints, "xxs")) {
+//     @content;
+//   }
+// }
+
+// @mixin xs {
+//   @media screen and (max-width: map-get($breakpoints, "xs")) {
+//     @content;
+//   }
+// }
+
+// @mixin sm {
+//   @media screen and (max-width: map-get($breakpoints, "sm")) {
+//     @content;
+//   }
+// }
+
+// @mixin md {
+//   @media screen and (max-width: map-get($breakpoints, "md")) {
+//     @content;
+//   }
+// }
+
+// @mixin xmd {
+//   @media screen and (max-width: map-get($breakpoints, "xmd")) {
+//     @content;
+//   }
+// }
+
+// @mixin lg {
+//   @media screen and (max-width: map-get($breakpoints, "lg")) {
+//     @content;
+//   }
+// }
+
+// @mixin xl {
+//   @media screen and (max-width: map-get($breakpoints, "xl")) {
+//     @content;
+//   }
+// }
+
+// @mixin xxl {
+//   @media screen and (max-width: map-get($breakpoints, "xxl")) {
+//     @content;
+//   }
+// }
+
+// @mixin breakpoint($bp: 0) {
+//   @media screen and (max-width: $bp) {
+//     @content;
+//   }
+// }

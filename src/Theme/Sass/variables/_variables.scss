@@ -1,0 +1,399 @@
+// $body-font-family: "Inter", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+// font-family: 'Jura', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+
+// font-family: 'Heebo', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+// font-family: 'Roboto', sans-serif;
+
+$base: (
+  "--body-font-family": (
+    "Jura",
+    sans-serif,
+  ),
+  "--body-unit-rem-size": 62.5%,
+  "--body-font-size": 1.6rem,
+  "--body-line-height": 1.5,
+);
+
+$containers: (
+  "xl": 140rem,
+  "lg": 120rem,
+  "md": 106rem,
+  "sm": 63rem,
+);
+
+$font-family: (
+  "--ff-roboto": (
+    "Roboto",
+    sans-serif,
+  ),
+  "--ff-inter": (
+    "Inter",
+    sans-serif,
+  ),
+  "--ff-jura": (
+    "Jura",
+    sans-serif,
+  ),
+  "--ff-hebo": (
+    "Heebo",
+    sans-serif,
+  ),
+);
+
+$colors: (
+  primary: (
+    100: #000,
+    200: #000,
+  ),
+  secondary: (),
+  tertiary: (),
+  greyscale: (),
+);
+
+:root {
+  @each $key, $val in $base {
+    #{$key}: #{$val};
+  }
+
+  @each $key, $val in $font-family {
+    #{$key}: #{$val};
+  }
+}
+
+// Containers
+// prefix: con-
+
+// Grey Scale
+// prefix = gs-
+$grey-scale: (
+  "white": #ffffff,
+  "50": #f7f8f9,
+  "100": #e8ebed,
+  "200": #c9cdd2,
+  "300": #9ea4aa,
+  "400": #72787f,
+  "500": #454c53,
+  "600": #26282b,
+  "700": #1b1d1f,
+  "800": #131517,
+  "900": #0f0f0f,
+  "black": #000000,
+);
+
+// Colors
+// prefix = clr-
+$colors: (
+  "pri-light": #913bd8,
+  "pri": #7e2bc0,
+  "pri-dark": #691ba8,
+
+  "sec-light": #ff54e2,
+  "sec": #f13dd4,
+  "sec-dark": #e02ec3,
+
+  "ter-light": #fcea49,
+  "ter": #f4e23e,
+  "ter-dark": #eedb2a,
+
+  "info": rgb(48, 115, 248),
+  "warn": rgb(232, 47, 47),
+  "success": rgb(103, 191, 62),
+);
+
+// // Typography
+// $typography: (
+//   h1: 3.98rem,
+//   h2: 3.31rem,
+//   h3: 2.76rem,
+//   h4: 2.30rem,
+//   h5: 1.92rem,
+//   p: 1.6rem,
+//   li: 1.6rem,
+//   a: 1.6rem,
+//   h6: 1.3rem,
+// );
+
+$typography: (
+  h1: (
+    desk: (
+      font-size: 3.98rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.2rem,
+    ),
+    lg: (
+      font-size: 3.5rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    md: (
+      font-size: 3.2rem,
+      font-weight: 800,
+      line-height: 1.25,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    sm: (
+      font-size: 2.8rem,
+      font-weight: 800,
+      line-height: 1.25,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+  ),
+  h2: (
+    desk: (
+      font-size: 3.31rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.2rem,
+    ),
+    lg: (
+      font-size: 2.9rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    md: (
+      font-size: 2.5rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    sm: (
+      font-size: 2.2rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+  ),
+  h3: (
+    desk: (
+      font-size: 2.76rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.2rem,
+    ),
+    lg: (
+      font-size: 2.5rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    md: (
+      font-size: 2.2rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    sm: (
+      font-size: 2rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+  ),
+  h4: (
+    desk: (
+      font-size: 2.31rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.2rem,
+    ),
+    lg: (
+      font-size: 2.1rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    md: (
+      font-size: 1.9rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    sm: (
+      font-size: 1.7rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+  ),
+  h5: (
+    desk: (
+      font-size: 1.92rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.2rem,
+    ),
+    lg: (
+      font-size: 1.7rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    md: (
+      font-size: 1.5rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+    sm: (
+      font-size: 1.3rem,
+      font-weight: 800,
+      line-height: 1.35,
+      letter-spacing: -0.03em,
+      margin-bottom: 1.6rem,
+    ),
+  ),
+  p: (
+    font-size: 1.8rem,
+    font-weight: 400,
+    line-height: 1.6,
+    letter-spacing: 0em,
+    margin-bottom: 1.6rem,
+  ),
+  h6: (
+    font-size: 1.3rem,
+    font-weight: 400,
+    line-height: 1.2,
+    letter-spacing: -0.03em,
+    margin-bottom: 1.6rem,
+  ),
+);
+
+// Body small font sizes
+// Prefix = font-size-
+$font-sizes: (
+  "4": 0.4rem,
+  "6": 0.6rem,
+  "8": 0.8rem,
+  "10": 1rem,
+  "12": 1.2rem,
+  "13": 1.3rem,
+  "14": 1.4rem,
+  "15": 1.5rem,
+  "16": 1.6rem,
+  "17": 1.7rem,
+  "18": 1.8rem,
+  "20": 2rem,
+  "22": 2.2rem,
+);
+
+$icons: (
+  "sm": 2rem,
+  "md": 4rem,
+  "lg": 6rem,
+);
+
+// Font Weight
+// prefix = name
+$font-weight: (
+  "thin": 100,
+  "exlight": 200,
+  "light": 300,
+  "reg": 400,
+  "med": 500,
+  "bold": 600,
+  "exbold": 700,
+  "black": 800,
+  "exblack": 900,
+);
+
+// Padding and margins
+// prefixes : p , pr, m, mr
+$utils: (
+  "0": 0rem,
+  "2": 0.2rem,
+  "4": 0.4rem,
+  "8": 0.8rem,
+  "12": 1.2rem,
+  "16": 1.6rem,
+  "18": 1.8rem,
+  "20": 2rem,
+  "24": 2.4rem,
+  "26": 2.6rem,
+  "30": 3rem,
+  "34": 3.4rem,
+  "38": 3.8rem,
+  "42": 4.2rem,
+  "48": 4.8rem,
+  "52": 5.2rem,
+  "56": 5.6rem,
+  "60": 6rem,
+  "68": 6.8rem,
+  "72": 7.2rem,
+  "76": 7.6rem,
+  "80": 8rem,
+  "84": 8.4rem,
+  "92": 9.2rem,
+  "124": 12.4rem,
+);
+
+$borders: (
+  "pt5": 0.5px,
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px,
+);
+
+$borders-radius: (
+  "1": 1px,
+  "2": 2px,
+  "3": 3px,
+  "4": 4px,
+  "5": 5px,
+  "25": 25px,
+  "50": 50px,
+);
+
+$widths: (
+  "w10": 10%,
+  "w20": 20%,
+  "w30": 30%,
+  "w40": 40%,
+  "w50": 50%,
+  "w60": 60%,
+  "w70": 70%,
+  "w80": 80%,
+  "w90": 90%,
+  "w100": 100%,
+);
+
+// Displays
+// Prefix : d => dnone dblock
+
+// extras
+
+// Theme
+// $theme-base-font-size: 62.5%; // 10px = 1rem
+// $body-font-family: "Jura", sans-serif;
+// $body-font-size: 1.6rem;
+// $body-line-height: 1.5;
+// $font_mob_ratio: 1.4;

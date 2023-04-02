@@ -1,0 +1,209 @@
+.bod-t {
+  border: 1px solid red;
+}
+
+$boder: (
+  "1": 1px,
+);
+
+@mixin boder($num, $color) {
+  border: #{$num + "px"} solid $color;
+}
+
+.testCl {
+  @include boder(0.5, #859);
+}
+
+@mixin border-mixin($num, $limit) {
+  // Desktop View
+  @for $i from 0 through $limit {
+    $cal: #{$i + "px"};
+
+    .bod-#{$i} {
+      border: $cal solid #000;
+    }
+
+    .bodt-#{$i} {
+      border-top: $cal solid #000;
+    }
+    .bodr-#{$i} {
+      border-right: $cal solid #000;
+    }
+    .bodb-#{$i} {
+      border-bottom: $cal solid #000;
+    }
+    .bodl-#{$i} {
+      border-left: $cal solid #000;
+    }
+  }
+
+  // XL View 1200px
+  @include xl {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$xl} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$xl} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$xl} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$xl} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$xl} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // Lg View 960px
+  @include lg {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$lg} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$lg} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$lg} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$lg} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$lg} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // xmd View 820px
+  @include xmd {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$xmd} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$xmd} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$xmd} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$xmd} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$xmd} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // md View 768px
+  @include md {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$md} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$md} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$md} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$md} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$md} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // sm View 576px
+  @include sm {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$sm} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$sm} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$sm} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$sm} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$sm} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // xs View 414px
+  @include xs {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$xs} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$xs} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$xs} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$xs} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$xs} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+
+  // xxs View 375px
+  @include xxs {
+    @for $i from 0 through $limit {
+      $cal: #{$i + "px"};
+
+      .bod-#{$i}-#{$xxs} {
+        border: $cal solid #000;
+      }
+
+      .bodt-#{$i}-#{$xxs} {
+        border-top: $cal solid #000;
+      }
+      .bodr-#{$i}-#{$xxs} {
+        border-right: $cal solid #000;
+      }
+      .bodb-#{$i}-#{$xxs} {
+        border-bottom: $cal solid #000;
+      }
+      .bodl-#{$i}-#{$xxs} {
+        border-left: $cal solid #000;
+      }
+    }
+  }
+}
+
+@include border-mixin(4, 5);
