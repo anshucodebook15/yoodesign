@@ -4,6 +4,22 @@
 //   font-family: "Roboto", sans-serif;
 // }
 
+// $typography: (
+//   h1: 3.98rem,
+//   h2: 3.31rem,
+//   h3: 2.76rem,
+//   h4: 2.30rem,
+//   h5: 1.92rem,
+//   p: 1.6rem,
+//   li: 1.6rem,
+//   a: 1.6rem,
+//   h6: 1.3rem,
+// );
+
+
+
+
+
 @mixin typescale(
   $fontsize,
   $fontweight: 400,

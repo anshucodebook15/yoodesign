@@ -1,3 +1,158 @@
+/* Build grid */
+
+@mixin grid-set-col($noofcolum, $frsize) {
+  grid-template-columns: repeat($noofcolum, $frsize);
+}
+
+@mixin grid-col-span($num) {
+  grid-column: span $num;
+}
+
+@mixin grid-row-span($num) {
+  grid-row: span $num;
+}
+
+.grid {
+  display: grid;
+}
+
+@mixin grid-mixin($num, $limit) {
+
+    
+  @for $i from 0 through $limit {
+    .grid-col-#{$i} {
+      @include grid-set-col($i, 1fr);
+    }
+
+    .grid-col-span-#{$i} {
+      @include grid-col-span($i);
+    }
+
+    .grid-row-span-#{$i} {
+      @include grid-row-span($i);
+    }
+  }
+
+  @include xl {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{xl} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{xl} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{xl} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include lg {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{lg} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{lg} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{lg} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include xmd {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{xmd} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{xmd} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{xmd} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include md {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{md} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{md} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{md} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include sm {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{sm} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{sm} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{sm} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include xs {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{xs} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{xs} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{xs} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+
+  @include xxs {
+    @for $i from 0 through $limit {
+      .grid-col-#{$i}-#{xxs} {
+        @include grid-set-col($i, 1fr);
+      }
+
+      .grid-col-span-#{$i}-#{xxs} {
+        @include grid-col-span($i);
+      }
+
+      .grid-row-span-#{$i}-#{xxs} {
+        @include grid-row-span($i);
+      }
+    }
+  }
+}
+
+@include grid-mixin(0, 12);
+
+//   Calculation
+
+// $val: #{$num * $i};
+// $cal: #{($num * $i) / 10}rem;
+
 // /* GRID SYSTEM */
 // @use "sass:math";
 
@@ -41,13 +196,9 @@
 //   flex-flow: row wrap;
 // }
 
-
 // .flx{
 //   display: flex;
 // }
-
-
-
 
 // // Coloum
 
@@ -130,14 +281,10 @@
 //     .md-#{$key} {
 //       width: $val;
 //     }
-  
 
 //   }
 
-
-
 // }
-
 
 // // Heights
 
@@ -152,7 +299,6 @@
 // .pt1{
 //   padding-top: 1rem !important;
 // }
-
 
 // .aise {
 //   align-self: flex-end;

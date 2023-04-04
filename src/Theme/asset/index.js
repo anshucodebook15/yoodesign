@@ -1,11 +1,19 @@
-import YOOLOGO from "./fillers/yoologo.png";
+import YOOLOGO from "./fillers/yootlogo.png";
 import COMMINGSOON from "./fillers/commingsoon.png";
+import FOLLOWBTN from "./fillers/followbtn.png";
+import D3BOTTLE from "./fillers/3dbottle.png";
+import MNCHYSBLACK from "./fillers/mnchys.svg";
+import BOOKVIDEO from "./fillers/book.webm";
 
 
 
 export const YOOHOME = {
     YOOLOGO,
-    COMMINGSOON
+    COMMINGSOON,
+    FOLLOWBTN,
+    D3BOTTLE,
+    MNCHYSBLACK,
+    BOOKVIDEO
 }
 
 export const LOADING = {

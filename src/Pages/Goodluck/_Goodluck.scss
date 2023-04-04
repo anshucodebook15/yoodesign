@@ -1,0 +1,75 @@
+.yoogoodluck {
+  min-height: 100vh;
+  background-color: #eee;
+
+  &_logo {
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+
+  &_thankyou {
+    padding: 16rem 0;
+  }
+
+  &_midtext {
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 0;
+      font-weight: 800;
+      color: red;
+    }
+  }
+
+
+  &_moretext{
+    p{
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+  }
+}
+
+.marque_text {
+  width: 100%;
+  overflow: hidden;
+
+  &-leftmove {
+    background-image: url("../../Theme/asset/fillers/marquee3.svg");
+    background-size: 150rem;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-position: center;
+    width: 200%;
+
+    position: relative;
+    animation: marqueeleft 20s linear infinite;
+  }
+  &-rightmove {
+    background-image: url("../../Theme/asset/fillers/marquee3.svg");
+    background-size: 150rem;
+    background-repeat: no-repeat;
+    background-repeat: repeat-x;
+    background-position: center;
+    width: 200%;
+
+    position: relative;
+    animation: marqueeright 20s linear infinite;
+  }
+}
+
+@keyframes marqueeleft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes marqueeright {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}

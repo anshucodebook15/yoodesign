@@ -10,11 +10,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 // font-family: 'Roboto', sans-serif;
 
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+// font-family: 'Space Mono', monospace;
+
 $base: (
-  "--body-font-family": (
-    "Jura",
-    sans-serif,
-  ),
+  "--body-font-family": ('Space Mono', monospace),
   "--body-unit-rem-size": 62.5%,
   "--body-font-size": 1.6rem,
   "--body-line-height": 1.5,
@@ -44,13 +44,14 @@ $font-family: (
     "Heebo",
     sans-serif,
   ),
+  "--ff-spacemono": (
+    "Space Mono",
+    monospace,
+  ),
 );
 
 $colors: (
-  primary: (
-    100: #000,
-    200: #000,
-  ),
+  primary: (),
   secondary: (),
   tertiary: (),
   greyscale: (),
@@ -64,6 +65,9 @@ $colors: (
   @each $key, $val in $font-family {
     #{$key}: #{$val};
   }
+
+  --clr-pri: #c3ffe6;
+  --clr-ter: #4fbb8e;
 }
 
 // Containers
@@ -373,18 +377,18 @@ $borders-radius: (
   "50": 50px,
 );
 
-$widths: (
-  "w10": 10%,
-  "w20": 20%,
-  "w30": 30%,
-  "w40": 40%,
-  "w50": 50%,
-  "w60": 60%,
-  "w70": 70%,
-  "w80": 80%,
-  "w90": 90%,
-  "w100": 100%,
-);
+// $widths: (
+//   "w10": 10%,
+//   "w20": 20%,
+//   "w30": 30%,
+//   "w40": 40%,
+//   "w50": 50%,
+//   "w60": 60%,
+//   "w70": 70%,
+//   "w80": 80%,
+//   "w90": 90%,
+//   "w100": 100%,
+// );
 
 // Displays
 // Prefix : d => dnone dblock
