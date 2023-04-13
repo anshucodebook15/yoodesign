@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Loading() {
   return (
-    <motion.div initial={{ y: "-50vh" }} animate={{ y: "0vh" }} className='loading h-100vh flx aic'>
+    <motion.div initial={{ y: 0 }} animate={{ y: "-100vh" }} transition={{ delay: 2 }} className='loading h-100vh flx aic'>
 
       <div className="marque_text">
         <div className="leftmove p-28"></div>
@@ -13,3 +13,6 @@ export default function Loading() {
     </motion.div>
   )
 }
+
+
+// initial={{ y: 0 }} animate={{ y: "-100vh" }} transition={{ delay: 2 }}

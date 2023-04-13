@@ -3,8 +3,14 @@
   // height: 100vh;
 }
 
-.closeico{
+.closeico {
   cursor: pointer;
+}
+
+.enterarrow {
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem 0.5rem 0.3rem;
+  font-weight: 800;
 }
 
 // Yoo Hero Section
@@ -32,6 +38,11 @@
     transform: rotate(0deg);
   }
 
+  &_downarrow{
+    width: 2.2rem;
+    
+  }
+
   &_text {
     font-size: 1.3rem;
     padding-block: 0.8rem;
@@ -42,7 +53,7 @@
   &_followbtn {
     position: relative;
     z-index: 100;
-    width: 25rem;
+    width: 20rem;
     cursor: pointer;
   }
 
@@ -152,6 +163,13 @@
 
   &_form {
     background-color: red;
+  }
+
+
+  &_error{
+    font-size: 1.5rem;
+    color: #fff;
+
   }
 
   &_btn {

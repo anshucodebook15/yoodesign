@@ -1,6 +1,6 @@
 .yoogoodluck {
   min-height: 100vh;
-  background-color: #eee;
+  background-color: var(--clr-pri);
 
   .leftmove {
     @include marqueText(
