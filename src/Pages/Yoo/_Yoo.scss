@@ -1,15 +1,11 @@
 // Yoo utils
-.yh-100{
-  height: 100vh;
+.yh-100 {
+  // height: 100vh;
 }
 
-
-
-
-
-
-
-
+.closeico{
+  cursor: pointer;
+}
 
 // Yoo Hero Section
 .yoohero {
@@ -19,16 +15,8 @@
   background-size: contain;
   min-height: 100vh;
 
-  &_3d {
-    min-height: 80vh;
-  }
-
   &_btn {
     position: relative;
-    // background-image: url('../../Theme/asset/fillers/milk.svg');
-    // background-size: 25rem;
-    // background-position-x: -3rem;
-    // background-repeat: no-repeat;
   }
 
   &_btn::after {
@@ -58,6 +46,10 @@
     cursor: pointer;
   }
 
+  &_mob_pack {
+    min-height: 58vh;
+  }
+
   /*1400px */
   @include xxl {
   }
@@ -70,6 +62,10 @@
   @include lg {
     &_btn::after {
       background-size: 35rem;
+    }
+
+    &_followbtn {
+      width: 20rem;
     }
   }
 
@@ -93,6 +89,10 @@
 
   /*576px */
   @include sm {
+    background-size: 130rem;
+    background-position-x: -1rem;
+    background-position-y: 0rem;
+    background-repeat: no-repeat;
     &_btn::after {
       background-size: 28rem;
     }
@@ -113,7 +113,6 @@
   }
 }
 
-
 // Yoopopup
 .yoopopup {
   position: fixed;
@@ -122,50 +121,50 @@
   width: 100%;
   height: 100vh;
 
-
-  &_facts{
+  &_facts {
     background-color: red;
     border: 5px solid #000;
+    margin-top: 4rem;
     margin-bottom: 1rem;
 
-    &-head{
+    &-head {
       background-color: #fff;
-      border-bottom:  5px solid #000;
-      
+      border-bottom: 5px solid #000;
 
-      h2{
-
+      h2 {
         font-size: 2rem;
         font-weight: 900;
         color: #000;
-
       }
     }
 
-    &-points{
+    &-points {
       color: #fff;
-     
 
-      li{
+      li {
         font-size: 1.6rem;
-        word-spacing: .4rem;
-        margin-bottom: .6rem;
+        word-spacing: 0.4rem;
+        margin-bottom: 0.6rem;
         font-weight: 800;
       }
     }
   }
 
-
-  &_form{
+  &_form {
     background-color: red;
-
   }
 
-  &_btn{
+  &_btn {
     border: 3px solid #000;
     background: #fff;
     border-radius: 25rem;
     font-weight: 800;
-    
+  }
+
+  /*576px */
+  @include sm {
+    &_facts {
+      margin-top: 5rem;
+    }
   }
 }

@@ -1,5 +1,10 @@
 /* Build grid */
 
+.jcse{
+  justify-content: space-evenly;
+}
+
+
 @mixin grid-set-col($noofcolum, $frsize) {
   grid-template-columns: repeat($noofcolum, $frsize);
 }

@@ -1,0 +1,11 @@
+.loading {
+  background-color: #eee;
+
+  .leftmove {
+    @include marqueText(
+      "../../Theme/asset/fillers/dropmq.svg",
+      marqueeleft,
+      150rem
+    );
+  }
+}

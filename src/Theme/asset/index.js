@@ -3,7 +3,7 @@ import COMMINGSOON from "./fillers/commingsoon.png";
 import FOLLOWBTN from "./fillers/followbtn.png";
 import D3BOTTLE from "./fillers/3dbottle.png";
 import MNCHYSBLACK from "./fillers/mnchys.svg";
-import BOOKVIDEO from "./fillers/book.webm";
+import MUNCHYPACK from "./fillers/munchy.gif";
 
 
 
@@ -13,7 +13,7 @@ export const YOOHOME = {
     FOLLOWBTN,
     D3BOTTLE,
     MNCHYSBLACK,
-    BOOKVIDEO
+    MUNCHYPACK
 }
 
 export const LOADING = {

@@ -1,7 +1,8 @@
 import "./Theme/Sass/index.scss";
 
 import { Routes, Route } from "react-router-dom"
-import { Yoo, Goodluck } from './Pages';
+import { Yoo, Goodluck, Errpage } from './Pages';
+import Test from "./Test/Test";
 
 
 const AppRoutes = () => {
@@ -9,6 +10,8 @@ const AppRoutes = () => {
     <Routes>
       <Route path='/' element={<Yoo />} />
       <Route path='/goodluck' element={<Goodluck />} />
+      <Route path='/test' element={<Test />} />
+      <Route path='*' element={<Errpage />} />
     </Routes>
   )
 }

@@ -1,0 +1,85 @@
+@mixin marqueText($bgurl, $animate, $size) {
+  background-image: url($bgurl);
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-position: center;
+  width: 200%;
+
+  position: relative;
+  animation: $animate 20s linear infinite;
+}
+
+.marque_text {
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes marqueeleft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes marqueeright {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+// Original
+
+// @mixin marqueText($bgurl, $animate, $size) {
+//     background-image: url($bgurl);
+//     background-size: $size;
+//     background-repeat: no-repeat;
+//     background-repeat: repeat-x;
+//     background-position: center;
+//     width: 200%;
+
+//     position: relative;
+//     animation: $animate 20s linear infinite;
+//   }
+
+//   .marque_text {
+//     width: 100%;
+//     overflow: hidden;
+
+//     &-leftmove {
+//       @include marqueText(
+//         "../../Theme/asset/fillers/marquee3.svg",
+//         marqueeleft,
+//         150rem
+//       );
+//     }
+
+//     &-rightmove {
+//       @include marqueText(
+//         "../../Theme/asset/fillers/marquee3.svg",
+//         marqueeright,
+//         150rem
+//       );
+//     }
+//   }
+
+//   @keyframes marqueeleft {
+//     from {
+//       left: 0%;
+//     }
+//     to {
+//       left: -100%;
+//     }
+//   }
+//   @keyframes marqueeright {
+//     from {
+//       left: -100%;
+//     }
+//     to {
+//       left: 0%;
+//     }
+//   }

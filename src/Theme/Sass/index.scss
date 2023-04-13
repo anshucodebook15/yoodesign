@@ -17,6 +17,7 @@
 @import "./utils/flexbox"; // FLEXBOX
 @import "./utils/width"; // WIDTH
 @import "./utils/height"; // HEIGHT
+@import "./utils/animations"; // HEIGHT
 
 @import "./colors/colors";
 @import "./typography/typography";
@@ -33,3 +34,5 @@
 // Pages
 @import "../../Pages/Yoo/Yoo.scss";
 @import "../../Pages/Goodluck/Goodluck";
+@import "../../Pages/Loading/Loading";
+@import "../../Test/Test";

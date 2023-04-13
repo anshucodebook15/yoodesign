@@ -6,7 +6,7 @@ export default function Goodluck() {
     <section name="yoogoodluck" className="yoogoodluck">
 
       <div className="marque_text">
-        <div className="marque_text-leftmove p-28"></div>
+        <div className="leftmove p-28"></div>
       </div>
 
       <div className="yoogoodluck_thankyou flx aic">

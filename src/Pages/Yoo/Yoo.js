@@ -1,9 +1,33 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from "react";
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { YOOHOME } from "../../Theme/asset";
+import Loading from "../Loading/Loading";
+import { motion } from "framer-motion";
+
 
 const YooContext = createContext();
 
 const { Provider } = YooContext;
+
+
+const yooheroVariant = (x, y) => {
+  return {
+    hidden: {
+      x: x,
+    },
+    visible: {
+      x: y
+
+    }
+  }
+}
+
+
 
 const YooHero = () => {
   const { openpopup, inpref } = useContext(YooContext);
@@ -12,29 +36,55 @@ const YooHero = () => {
 
   return (
     <section name="yoohero" className="yoohero">
-      <div className="yoohero_nav  ">
+
+
+      <motion.div
+        initial="hidden"
+        animate="visible"
+
+        className="yoohero_nav  ">
         <div className="con-lg">
-          <div className="grid grid-col-12">
-            <div className="yoohero_logo grid-col-span-3 grid-col-span-4-md py-28 ">
+          <div className="grid grid-col-12 jcse">
+
+            <motion.div
+              variants={yooheroVariant("-100vw", 0)}
+              transition={{ delay: 0.5 }}
+
+              className="yoohero_logo grid-col-span-3 grid-col-span-4-sm py-28 ">
               <img
                 src={YOOHOME.YOOLOGO}
                 alt=""
-                className="w50 w60-xmd w80-xs w90-xxs"
+                className="w50 w60-xmd w100-sm"
+              />
+            </motion.div>
+
+
+            <div className="yoohero_3d grid-col-span-6 grid-col-span-4-sm grid-col-span-4-xs py-24-lg py-32-sm  ">
+              <img
+                src={YOOHOME.MUNCHYPACK}
+                alt=""
+                className="w100 dis-none-sm"
               />
             </div>
-            <div className="yoohero_3d grid-col-span-6 grid-col-span-4-md">
-              <img src={YOOHOME.D3BOTTLE} alt="" className="w100" />
-{/* 
-              <video width="320" height="240" controls>
-                <source src={YOOHOME.BOOKVIDEO} type="video/mp4" autoplay />
 
-              </video> */}
+            <motion.div
+              variants={yooheroVariant("100vw", 0)}
+              transition={{ delay: 0.8 }}
+              className="yoohero_commingsoon grid-col-span-3 grid-col-span-4-sm  py-28 ">
+              <div className="flx jcfe">
+                <img src={YOOHOME.COMMINGSOON} alt="" className="w70 w100-sm" />
+              </div>
+            </motion.div>
 
-            </div>
-            <div className="yoohero_commingsoon grid-col-span-3 grid-col-span-4-md py-28 ">
-              <img src={YOOHOME.COMMINGSOON} alt="" className="w80" />
-            </div>
+
+
           </div>
+        </div>
+      </motion.div>
+
+      <div className="yoohero_mob_pack dis-none dis-block-sm">
+        <div className="flx jcc aic">
+          <img src={YOOHOME.MUNCHYPACK} alt="" className="w100-sm" />
         </div>
       </div>
 
@@ -44,7 +94,6 @@ const YooHero = () => {
             <div>
               <div className="txtc">
                 <img
-
                   src={YOOHOME.FOLLOWBTN}
                   alt=""
                   className="yoohero_followbtn"
@@ -63,14 +112,16 @@ const YooHero = () => {
 const YooPopup = () => {
   const { closepopup, inpref } = useContext(YooContext);
 
-
   return (
     <section className="yoopopup">
       <div className="con-lg">
-        <div className="flx jcfe p-4" onClick={closepopup}>close</div>
+        <motion.div initial={{ x: "-100vw" }} animate={{ x: 0 }} className="flx jcfe p-4 py-20" onClick={closepopup}>
+          <span class="material-symbols-outlined white closeico">close</span>
+        </motion.div>
 
         <div className="flx jcc aic yh-100 ">
-          <div>
+
+          <motion.div initial={{ y: "-100vh" }} animate={{ y: 0 }}>
             <div className="yoopopup_facts">
               <div className="yoopopup_facts-head p-2">
                 <h2 className="m-0">NUTRITIONAL FACTS</h2>
@@ -108,7 +159,12 @@ const YooPopup = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </motion.div>
+
+
+
+
+
         </div>
       </div>
     </section>
@@ -117,12 +173,19 @@ const YooPopup = () => {
 
 export default function Yoo() {
   const [popup, setpopup] = useState(false);
+  const [loadingscreen, setloadingscreen] = useState(true);
   const inpref = useRef();
 
   useEffect(() => {
+
+
+    setTimeout(() => {
+      setloadingscreen(false);
+    }, 2000);
+
     setTimeout(() => {
       setpopup(true);
-    }, 2000);
+    }, 4000);
   }, []);
 
   const closepopup = () => {
@@ -136,15 +199,22 @@ export default function Yoo() {
   const props = {
     closepopup,
     openpopup,
-    inpref
+    inpref,
   };
 
   return (
     <>
       <Provider value={props}>
-        {popup ? <YooPopup /> : ""}
+        {/* <Loading /> */}
 
-        <YooHero />
+        {loadingscreen ? <Loading /> : (
+
+          <>
+            {popup ? <YooPopup /> : ""}
+            <YooHero />
+          </>
+        )}
+
       </Provider>
     </>
   );
