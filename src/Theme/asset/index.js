@@ -5,6 +5,7 @@ import DOWNARROW from "./fillers//downarrow.svg";
 import D3BOTTLE from "./fillers/3dbottle.png";
 import MNCHYSBLACK from "./fillers/mnchys.svg";
 import MUNCHYPACK from "./fillers/munchy.gif";
+import TWITTERICON from "./fillers/twitter2.svg";
 
 
 
@@ -15,7 +16,8 @@ export const YOOHOME = {
     D3BOTTLE,
     MNCHYSBLACK,
     MUNCHYPACK,
-    DOWNARROW
+    DOWNARROW,
+    TWITTERICON
 }
 
 export const LOADING = {

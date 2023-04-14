@@ -35,6 +35,11 @@ const yooheroarrow = (y1, y2) => {
     },
   };
 };
+const yooherofollow = {
+  hover: {
+    scale: 1.5,
+  },
+};
 
 const YooHero = () => {
   const { openpopup, inpref } = useContext(YooContext);
@@ -48,13 +53,13 @@ const YooHero = () => {
           <div className="grid grid-col-12 jcse">
             <motion.div
               variants={yooheroVariant("-100vw", 0)}
-              transition={{ delay: 2.5 }}
+              transition={{ delay: 3.5 }}
               className="yoohero_logo grid-col-span-3 grid-col-span-4-sm py-28 "
             >
               <img
                 src={YOOHOME.YOOLOGO}
                 alt=""
-                className="w50 w80-xmd w100-sm"
+                className="w60 w80-xmd w100-sm"
               />
             </motion.div>
 
@@ -70,14 +75,14 @@ const YooHero = () => {
 
             <motion.div
               variants={yooheroVariant("100vw", 0)}
-              transition={{ delay: 2.8 }}
+              transition={{ delay: 3.8 }}
               className="yoohero_commingsoon grid-col-span-3 grid-col-span-4-sm  py-28 "
             >
               <div className="flx jcfe">
                 <img
                   src={YOOHOME.COMMINGSOON}
                   alt=""
-                  className="w70 w100-xmd w100-sm"
+                  className="w80 w100-xmd w100-sm"
                 />
               </div>
             </motion.div>
@@ -87,7 +92,11 @@ const YooHero = () => {
 
       <div className="yoohero_mob_pack ">
         <div className="flx jcc aic">
-          <img src={YOOHOME.MUNCHYPACK} alt="" className="yoohero_munchypackcover w80-xmd w100-sm" />
+          <img
+            src={YOOHOME.MUNCHYPACK}
+            alt=""
+            className="yoohero_munchypackcover w80-xmd w100-sm"
+          />
         </div>
       </div>
 
@@ -117,13 +126,34 @@ const YooHero = () => {
                   </motion.div>
                 </AnimatePresence>
 
-                <img
-                  src={YOOHOME.FOLLOWBTN}
-                  alt=""
-                  className="yoohero_followbtn"
-                  onClick={openpopup}
-                />
-                <p className="yoohero_text pos-rel z-200">Made By MNCHYS</p>
+                <div>
+                  <motion.img
+                    whileHover={{
+                      scale: 1.1,
+                    }}
+                    src={YOOHOME.FOLLOWBTN}
+                    alt=""
+                    className="yoohero_followbtn"
+                    onClick={openpopup}
+                  />
+                </div>
+
+                <p className="yoohero_text pos-rel z-200 mb-0">
+                  Made By MNCHYS
+                </p>
+
+                <a href="" className="pos-rel z-200">
+                  <div className="flx jcc">
+                    <motion.img
+                      whileHover={{
+                        scale: 1.1,
+                      }}
+                      src={YOOHOME.TWITTERICON}
+                      alt=""
+                      className="w10 m-0   "
+                    />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -173,9 +203,9 @@ const YooPopup = () => {
             </div>
             <div className="yoopopup_form p-4">
               <form action="">
-                {formerror ? (
+                {formerror.state ? (
                   <div className="txtc">
-                    <p className="yoopopup_error">Field's can not be empty</p>
+                    <p className="yoopopup_error">{formerror.message}</p>
                   </div>
                 ) : (
                   ""
@@ -238,7 +268,10 @@ const YooPopup = () => {
 
 export default function Yoo() {
   const [popup, setpopup] = useState(false);
-  const [loadingscreen, setloadingscreen] = useState(true);
+  const [loadingscreen, setloadingscreen] = useState({
+    state: false,
+    message: "",
+  });
   const [formerror, setformerror] = useState(false);
   const [userDetails, setuserDetails] = useState({
     twitterhandle: "",
@@ -270,18 +303,31 @@ export default function Yoo() {
     e.preventDefault();
 
     if (userDetails.twitterhandle && userDetails.walletaddress) {
-      setformerror(false);
+      if (userDetails.twitterhandle !== userDetails.walletaddress) {
+        setformerror({
+          state: false,
+          message: "",
+        });
 
-      let obj = {
-        twitterhandle: userDetails.twitterhandle,
-        walletaddress: userDetails.walletaddress,
-      };
+        let obj = {
+          twitterhandle: userDetails.twitterhandle,
+          walletaddress: userDetails.walletaddress,
+        };
 
-      await postData(obj);
+        await postData(obj);
 
-      navigate("/goodluck");
+        navigate("/goodluck");
+      } else {
+        setformerror({
+          state: true,
+          message: "Field's cannot be same",
+        });
+      }
     } else {
-      setformerror(true);
+      setformerror({
+        state: true,
+        message: "Field's Cannot be empty",
+      });
     }
   };
 
@@ -323,9 +369,10 @@ export default function Yoo() {
 // {popup ? <YooPopup /> : ""}
 // <YooHero />
 
-
-{/* <div className="yoohero_mob_pack dis-none dis-block-lg">
+{
+  /* <div className="yoohero_mob_pack dis-none dis-block-lg">
 <div className="flx jcc aic">
   <img src={YOOHOME.MUNCHYPACK} alt="" className="w80-xmd w100-sm" />
 </div>
-</div> */}
+</div> */
+}

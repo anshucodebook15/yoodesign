@@ -1,5 +1,7 @@
 import React from "react";
 import { YOOHOME } from "../../Theme/asset";
+import { motion } from "framer-motion";
+
 
 export default function Goodluck() {
   return (
@@ -23,7 +25,24 @@ export default function Goodluck() {
             <div className="yoogoodluck_midtext">
               <p>Good Luck</p>
               <p>Follow your nose to polygon</p>
+
+          <div className="flx jcc py-16">
+
+              <a href="">
+                <motion.img
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  src={YOOHOME.TWITTERICON}
+                  alt=""
+                  className="goodlucktwit m-0   "
+                  />
+              </a>
+                  </div>
+
             </div>
+
+
           </div>
         </div>
       </div>
@@ -38,7 +57,7 @@ export default function Goodluck() {
           </p>
         </div>
       </div>
-      
+
     </section>
   );
 }

@@ -18,7 +18,8 @@
   background-image: url("../../Theme/asset/fillers/donatbg.png");
   background-color: var(--clr-pri);
   background-position: center;
-  background-size: contain;
+  background-size: 140rem;
+  // background-size: cover;
   min-height: 100vh;
 
   &_btn {
@@ -28,18 +29,18 @@
   &_btn::after {
     content: "";
     background-image: url("../../Theme/asset/fillers/milk.svg");
-    background-size: 47rem;
+    background-size: 42rem;
     background-repeat: no-repeat;
     width: 100%;
     height: 126%;
     position: absolute;
-    bottom: -24%;
-    left: -8rem;
-    transform: rotate(0deg);
+    bottom: -95%;
+    left: -10rem;
+    transform: rotate(10deg);
   }
 
   &_downarrow {
-    width: 2.2rem;
+    width: 2rem;
   }
 
   &_text {
@@ -57,12 +58,12 @@
   }
 
   &_mob_pack {
-    margin-top: -21rem;
+    margin-top: -27rem;
     // min-height: 58vh;
   }
 
   &_munchypackcover {
-    width: 30%;
+    width: 32%;
   }
 
   /*1400px */
@@ -162,10 +163,14 @@
       width: 95%;
     }
 
+    &_btn {
+      margin-top: -2rem;
+    }
+
     &_btn::after {
       background-size: 38rem;
       height: 126%;
-      bottom: -35%;
+      bottom: -65%;
       left: -8rem;
     }
   }
@@ -190,6 +195,7 @@
   position: fixed;
   z-index: 300;
   background-color: #00000074;
+  backdrop-filter: blur(4px);
   width: 100%;
   height: 100vh;
 
