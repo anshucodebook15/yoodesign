@@ -28,19 +28,18 @@
   &_btn::after {
     content: "";
     background-image: url("../../Theme/asset/fillers/milk.svg");
-    background-size: 38rem;
+    background-size: 47rem;
     background-repeat: no-repeat;
     width: 100%;
     height: 126%;
     position: absolute;
-    bottom: 0%;
-    left: -5rem;
+    bottom: -24%;
+    left: -8rem;
     transform: rotate(0deg);
   }
 
-  &_downarrow{
+  &_downarrow {
     width: 2.2rem;
-    
   }
 
   &_text {
@@ -58,21 +57,51 @@
   }
 
   &_mob_pack {
-    min-height: 58vh;
+    margin-top: -21rem;
+    // min-height: 58vh;
+  }
+
+  &_munchypackcover {
+    width: 30%;
   }
 
   /*1400px */
-  @include xxl {
+
+  @include breakpoint_minwidth(1400px) {
+    &_munchypackcover {
+      width: 35%;
+    }
   }
 
   /*1200px */
   @include xl {
+    &_munchypackcover {
+      width: 33%;
+    }
   }
 
   /*960px */
   @include lg {
+    // &_munchypackcover{
+    //   width: 35%;
+    // }
+
+    // &_mob_pack {
+    //   margin-top: -15rem;
+    //   // min-height: 58vh;
+    // }
+
+    &_mob_pack {
+      margin-top: -2rem;
+      // min-height: 58vh;
+    }
+
+    &_munchypackcover {
+      width: 75%;
+    }
+
     &_btn::after {
-      background-size: 35rem;
+      background-size: 48rem;
     }
 
     &_followbtn {
@@ -82,19 +111,37 @@
 
   /*820px */
   @include xmd {
+    &_mob_pack {
+      margin-top: -2rem;
+      // min-height: 58vh;
+    }
+
+    &_munchypackcover {
+      width: 75%;
+    }
+
     &_btn::after {
-      background-size: 32rem;
+      // background-size: 32rem;
     }
   }
 
   /*768px */
   @include md {
+    &_mob_pack {
+      margin-top: -2rem;
+      // min-height: 58vh;
+    }
+
+    &_munchypackcover {
+      width: 75%;
+    }
+
     &_followbtn {
       width: 20rem;
     }
 
     &_btn::after {
-      background-size: 30rem;
+      // background-size: 30rem;
     }
   }
 
@@ -104,15 +151,29 @@
     background-position-x: -1rem;
     background-position-y: 0rem;
     background-repeat: no-repeat;
+
+    &_mob_pack {
+      margin-top: -2rem;
+      padding: 4rem 0;
+      // min-height: 58vh;
+    }
+
+    &_munchypackcover {
+      width: 95%;
+    }
+
     &_btn::after {
-      background-size: 28rem;
+      background-size: 38rem;
+      height: 126%;
+      bottom: -35%;
+      left: -8rem;
     }
   }
 
   /*414px */
   @include xs {
     &_btn::after {
-      background-size: 25rem;
+      background-size: 28rem;
     }
   }
 
@@ -165,11 +226,9 @@
     background-color: red;
   }
 
-
-  &_error{
+  &_error {
     font-size: 1.5rem;
     color: #fff;
-
   }
 
   &_btn {

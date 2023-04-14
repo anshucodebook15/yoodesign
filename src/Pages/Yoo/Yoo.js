@@ -54,7 +54,7 @@ const YooHero = () => {
               <img
                 src={YOOHOME.YOOLOGO}
                 alt=""
-                className="w50 w60-xmd w100-sm"
+                className="w50 w80-xmd w100-sm"
               />
             </motion.div>
 
@@ -63,7 +63,7 @@ const YooHero = () => {
                 <img
                   src={YOOHOME.MUNCHYPACK}
                   alt=""
-                  className="w80 dis-none-sm"
+                  className="w80 dis-none dis-none-lg"
                 />
               </div>
             </div>
@@ -74,16 +74,20 @@ const YooHero = () => {
               className="yoohero_commingsoon grid-col-span-3 grid-col-span-4-sm  py-28 "
             >
               <div className="flx jcfe">
-                <img src={YOOHOME.COMMINGSOON} alt="" className="w70 w100-sm" />
+                <img
+                  src={YOOHOME.COMMINGSOON}
+                  alt=""
+                  className="w70 w100-xmd w100-sm"
+                />
               </div>
             </motion.div>
           </div>
         </div>
       </motion.div>
 
-      <div className="yoohero_mob_pack dis-none dis-block-sm">
+      <div className="yoohero_mob_pack ">
         <div className="flx jcc aic">
-          <img src={YOOHOME.MUNCHYPACK} alt="" className="w100-sm" />
+          <img src={YOOHOME.MUNCHYPACK} alt="" className="yoohero_munchypackcover w80-xmd w100-sm" />
         </div>
       </div>
 
@@ -130,8 +134,14 @@ const YooHero = () => {
 };
 
 const YooPopup = () => {
-  const { closepopup, inpref, onSubmitRedirect, userDetails, setuserDetails, formerror } =
-    useContext(YooContext);
+  const {
+    closepopup,
+    inpref,
+    onSubmitRedirect,
+    userDetails,
+    setuserDetails,
+    formerror,
+  } = useContext(YooContext);
 
   return (
     <section className="yoopopup">
@@ -163,14 +173,13 @@ const YooPopup = () => {
             </div>
             <div className="yoopopup_form p-4">
               <form action="">
-
                 {formerror ? (
-
                   <div className="txtc">
                     <p className="yoopopup_error">Field's can not be empty</p>
                   </div>
-
-                ) : ""}
+                ) : (
+                  ""
+                )}
 
                 <div className="mb-3">
                   <input
@@ -258,28 +267,25 @@ export default function Yoo() {
   };
 
   const onSubmitRedirect = async (e) => {
-
     e.preventDefault();
 
     if (userDetails.twitterhandle && userDetails.walletaddress) {
-
       setformerror(false);
 
       let obj = {
         twitterhandle: userDetails.twitterhandle,
         walletaddress: userDetails.walletaddress,
       };
-      
+
       await postData(obj);
 
       navigate("/goodluck");
-
     } else {
       setformerror(true);
     }
   };
 
-  console.log(userDetails);
+  // console.log(userDetails);
 
   const props = {
     closepopup,
@@ -288,7 +294,7 @@ export default function Yoo() {
     userDetails,
     setuserDetails,
     inpref,
-    formerror
+    formerror,
   };
 
   return (
@@ -300,10 +306,6 @@ export default function Yoo() {
       </Provider>
     </>
   );
-}
-
-{
-  /* <Loading /> */
 }
 
 {
@@ -320,3 +322,10 @@ export default function Yoo() {
 // <Loading />
 // {popup ? <YooPopup /> : ""}
 // <YooHero />
+
+
+{/* <div className="yoohero_mob_pack dis-none dis-block-lg">
+<div className="flx jcc aic">
+  <img src={YOOHOME.MUNCHYPACK} alt="" className="w80-xmd w100-sm" />
+</div>
+</div> */}
