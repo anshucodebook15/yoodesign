@@ -100,12 +100,14 @@ const YooHero = () => {
         </div>
       </div>
 
-      <div className="yoohero_btn">
+      <div className="yoohero_btn py-12">
         <div className="con-lg">
           <div className="flx jcc">
             <div>
               <div className="txtc">
-                <AnimatePresence>
+
+
+                {/* <AnimatePresence>
                   <motion.div
                     initial="hidden"
                     animate="visible"
@@ -124,7 +126,7 @@ const YooHero = () => {
                       className="yoohero_downarrow"
                     />
                   </motion.div>
-                </AnimatePresence>
+                </AnimatePresence> */}
 
                 <div>
                   <motion.img
@@ -288,7 +290,7 @@ export default function Yoo() {
 
     setTimeout(() => {
       setpopup(true);
-    }, 5000);
+    }, 8000);
   }, []);
 
   const closepopup = () => {

@@ -28,7 +28,7 @@
 
   &_btn::after {
     content: "";
-    background-image: url("../../Theme/asset/fillers/milk.svg");
+    // background-image: url("../../Theme/asset/fillers/milk.svg");
     background-size: 42rem;
     background-repeat: no-repeat;
     width: 100%;
@@ -58,7 +58,7 @@
   }
 
   &_mob_pack {
-    margin-top: -27rem;
+    margin-top: -22rem;
     // min-height: 58vh;
   }
 
@@ -168,6 +168,7 @@
     }
 
     &_btn::after {
+      background-image: url("../../Theme/asset/fillers/milk.svg");
       background-size: 38rem;
       height: 126%;
       bottom: -65%;
