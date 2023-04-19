@@ -105,8 +105,6 @@ const YooHero = () => {
           <div className="flx jcc">
             <div>
               <div className="txtc">
-
-
                 {/* <AnimatePresence>
                   <motion.div
                     initial="hidden"
@@ -274,6 +272,9 @@ export default function Yoo() {
     state: false,
     message: "",
   });
+
+  const [loaderyoo, setLoaderyoo] = useState(true);
+
   const [formerror, setformerror] = useState(false);
   const [userDetails, setuserDetails] = useState({
     twitterhandle: "",
@@ -284,13 +285,18 @@ export default function Yoo() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      setloadingscreen(false);
-    }, 2000);
+    const load = setTimeout(() => {
+      setLoaderyoo(false);
+    }, 5000);
 
-    setTimeout(() => {
+    const poptime = setTimeout(() => {
       setpopup(true);
     }, 8000);
+
+    return () => {
+      clearTimeout(load);
+      clearTimeout(poptime);
+    };
   }, []);
 
   const closepopup = () => {
@@ -348,7 +354,17 @@ export default function Yoo() {
   return (
     <>
       <Provider value={props}>
-        <Loading />
+        
+        {loaderyoo && (
+          <AnimatePresence initial={{ y: 0 }}>
+            <motion.div exit={{ y: -1000 }} className="loading h-100vh flx aic">
+              <div className="marque_text">
+                <div className="leftmove p-28"></div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        )}
+
         {popup ? <YooPopup /> : ""}
         <YooHero />
       </Provider>
@@ -357,6 +373,9 @@ export default function Yoo() {
 }
 
 {
+  {
+    /* {loaderyoo ? <Loading /> : ""} */
+  }
   /* {loadingscreen ? (
           <Loading />
         ) : (
